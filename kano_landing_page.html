@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kano Super League | Official Landing Page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                        url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            min-height: 90vh;
+        }
+
+        /* Standard Yellow Board Theme */
+        .league-board {
+            background-color: #ffc107 !important;
+            color: #212529 !important;
+            border-radius: 16px;
+            padding: 2rem !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect for Boards & Cards across sections */
+        .hover-board {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .hover-board:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Standardized Newsletter Section Styling */
+        .newsletter-section {
+            background-color: #ffc107 !important;
+            padding: 2rem 0 !important;
+        }
+
+        .newsletter-title {
+            font-size: 1.4rem !important;
+            font-weight: 700;
+        }
+
+        /* Standardized Dark Hover Button */
+        .newsletter-btn, .btn-dark-board {
+            background-color: #212529 !important;
+            color: #ffffff !important;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .newsletter-btn:hover, .btn-dark-board:hover {
+            background-color: #ffffff !important;
+            color: #212529 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-square {
+            width: 45px;
+            height: 45px;
+        }
+
+        @media (max-width: 576px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .newsletter-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
+
+    <!-- NAVBAR SECTION -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="#hero">
+                <i class="fa-solid fa-trophy text-warning me-2 fs-3"></i>
+                <span class="text-uppercase">Kano <span class="text-warning">Super League</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase fw-semibold">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stadium">Stadium</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#teams">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="hero" class="hero-section d-flex align-items-center text-light">
+        <div class="container text-center py-5">
+            <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">The Pride of Kano</span>
+            <h1 class="display-2 fw-bold text-uppercase text-white mb-3">Uniting Champions,<br><span class="text-warning">Igniting Passion</span></h1>
+            <p class="lead max-w-700 mx-auto text-light opacity-90 mb-4">Welcome to the official home of Kano Super League. Experience premier football action, world-class talent, and unmatched fan spirit.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#teams" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">Explore Teams</a>
+                <a href="#about" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <!-- UPDATED RELIABLE FOOTBALL MATCH PHOTO BELOW -->
+                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Kano Football Match Action" class="img-fluid rounded-4 shadow-lg hover-board">
+                        <div class="bg-warning text-dark p-3 rounded-3 shadow position-absolute bottom-0 start-0 m-3 fw-bold hover-board">
+                            <span class="fs-2 d-block">10+</span> Years of Excellence
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="text-warning text-uppercase fw-bold">About The League</h6>
+                    <h2 class="display-5 fw-bold text-dark mb-4">The Heartbeat of Kano Sports</h2>
+                    <p class="text-muted lead fs-6">Founded to showcase exceptional athletic talent across Northern Nigeria, the Kano Super League brings together top-tier clubs, energetic fans, and grassroots development under one banner.</p>
+                    <p class="text-muted">Our league stands for fair play, competitive sportsmanship, and community empowerment. Every season, we deliver thrilling fixtures that capture the spirit of thousands in Kano and beyond.</p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-semibold">16 Professional Clubs</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-semibold">Grassroots Academies</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-semibold">Modern Facilities</span>
+                        </div>
+                        <div class="col-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                            <span class="fw-semibold">Active Community</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STADIUM SECTION -->
+    <section id="stadium" class="py-5 bg-dark text-light">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h6 class="text-warning text-uppercase fw-bold">Home Ground</h6>
+                <h2 class="display-5 fw-bold text-white">Sani Abacha Stadium</h2>
+                <p class="text-secondary">Where thousands roar in unison. The iconic fortress of Kano football.</p>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80" alt="Stadium Arena" class="img-fluid rounded-4 shadow hover-board">
+                </div>
+                <div class="col-lg-5">
+                    <div class="league-board hover-board shadow">
+                        <h3 class="fw-bold mb-3">Arena Features</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-users fs-4"></i>
+                                <div>
+                                    <strong class="d-block">16,000 Capacity</strong>
+                                    <small>Fully all-seater modern grandstand</small>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-bolt fs-4"></i>
+                                <div>
+                                    <strong class="d-block">Night Match Floodlights</strong>
+                                    <small>HD Broadcast LED lighting installed</small>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-shield-halved fs-4"></i>
+                                <div>
+                                    <strong class="d-block">Hybrid Turf Pitch</strong>
+                                    <small>Maintained to international playing standards</small>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-dark-board w-100 fw-bold rounded-pill py-2">Book Matchday Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAMS SECTION -->
+    <section id="teams" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h6 class="text-warning text-uppercase fw-bold">The Competitors</h6>
+                <h2 class="display-5 fw-bold text-dark">Featured Franchises</h2>
+                <p class="text-muted">Meet the premier teams competing for the coveted Kano Super League trophy.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 league-board hover-board text-center p-4">
+                        <div class="bg-dark text-warning mx-auto rounded-circle d-flex align-items-center justify-content-center mb-3 icon-square fs-3">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h4 class="fw-bold">Kano Pillars FC</h4>
+                        <p class="small">The traditional powerhouses known for raw speed and dominant tactical play.</p>
+                        <span class="badge bg-dark text-light rounded-pill py-2 mt-auto">4x Champions</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 league-board hover-board text-center p-4">
+                        <div class="bg-dark text-warning mx-auto rounded-circle d-flex align-items-center justify-content-center mb-3 icon-square fs-3">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <h4 class="fw-bold">Dala Strikers</h4>
+                        <p class="small">High-octane attacking team carrying the pride of Dala hill area.</p>
+                        <span class="badge bg-dark text-light rounded-pill py-2 mt-auto">2x Cup Winners</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 league-board hover-board text-center p-4">
+                        <div class="bg-dark text-warning mx-auto rounded-circle d-flex align-items-center justify-content-center mb-3 icon-square fs-3">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h4 class="fw-bold">City Royals</h4>
+                        <p class="small">Master tacticians famed for airtight defense and ball possession.</p>
+                        <span class="badge bg-dark text-light rounded-pill py-2 mt-auto">2023 Finalists</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 league-board hover-board text-center p-4">
+                        <div class="bg-dark text-warning mx-auto rounded-circle d-flex align-items-center justify-content-center mb-3 icon-square fs-3">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h4 class="fw-bold">Kurmi Warriors</h4>
+                        <p class="small">Fearless young contenders taking the league by storm with high intensity.</p>
+                        <span class="badge bg-dark text-light rounded-pill py-2 mt-auto">Rising Stars</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section text-dark">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-lg-6">
+                    <h4 class="newsletter-title mb-1">Stay Updated On Matchdays</h4>
+                    <p class="mb-0 text-dark small fw-medium">Subscribe to receive live scores, ticket alerts, and league updates directly.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="d-flex gap-2 newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" class="form-control rounded-pill border-0 px-3 py-2 shadow-sm" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn fw-bold rounded-pill px-4 py-2 flex-shrink-0 newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h6 class="text-warning text-uppercase fw-bold">Get In Touch</h6>
+                <h2 class="display-5 fw-bold text-dark">Contact League Officials</h2>
+                <p class="text-muted">Have inquiries regarding trials, ticketing, or sponsorships? Drop us a message.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="league-board hover-board h-100 d-flex flex-column justify-content-between shadow-sm">
+                        <div>
+                            <h4 class="fw-bold mb-4">Contact Information</h4>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="icon-square bg-dark text-warning rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <strong class="d-block">Address</strong>
+                                    <span>Sani Abacha Stadium Complex, Kano State, Nigeria</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="icon-square bg-dark text-warning rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <strong class="d-block">Email Us</strong>
+                                    <span>info@kanosuperleague.ng</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="icon-square bg-dark text-warning rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <strong class="d-block">Call Center</strong>
+                                    <span>+234 (0) 800 KANO LEAGUE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-top border-dark">
+                            <h6 class="fw-bold mb-2">Follow Our Journey</h6>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-outline-dark rounded-circle btn-sm p-2"><i class="fa-brands fa-facebook-f px-1"></i></a>
+                                <a href="#" class="btn btn-outline-dark rounded-circle btn-sm p-2"><i class="fa-brands fa-x-twitter px-1"></i></a>
+                                <a href="#" class="btn btn-outline-dark rounded-circle btn-sm p-2"><i class="fa-brands fa-instagram px-1"></i></a>
+                                <a href="#" class="btn btn-outline-dark rounded-circle btn-sm p-2"><i class="fa-brands fa-youtube px-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="p-4 rounded-4 border shadow-sm hover-board bg-light" onsubmit="event.preventDefault();">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Full Name</label>
+                                <input type="text" class="form-control rounded-3" placeholder="e.g. Aminu Kano" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Email Address</label>
+                                <input type="email" class="form-control rounded-3" placeholder="name@example.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Subject</label>
+                                <input type="text" class="form-control rounded-3" placeholder="Sponsorship / Ticket Query" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold">Message</label>
+                                <textarea class="form-control rounded-3" rows="4" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-warning btn-lg fw-bold w-100 rounded-pill newsletter-btn">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-dark text-light py-4 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <i class="fa-solid fa-trophy text-warning me-2 fs-4"></i>
+                <span class="fw-bold fs-5 text-uppercase">Kano <span class="text-warning">Super League</span></span>
+            </div>
+            <p class="text-secondary small mb-3">&copy; 2026 Kano Super League Board. All Rights Reserved.</p>
+            <div class="d-flex justify-content-center gap-4 text-secondary small">
+                <a href="#" class="text-secondary text-decoration-none">Privacy Policy</a>
+                <a href="#" class="text-secondary text-decoration-none">Terms of Service</a>
+                <a href="#" class="text-secondary text-decoration-none">Media Kit</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
